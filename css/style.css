@@ -1,0 +1,38 @@
+body{
+    background-color: #3c4e75;
+}
+
+h1{
+    text-align: center;
+    font-size: 52px;
+    font-family: 'Abel', Courier, monospace;
+}
+
+h2,h3{
+    font-size: 30px;
+    font-family:'Ariel', Times, serif;
+    color:rgb(143, 42, 42);
+}
+
+p{
+    line-height: 100%;
+}
+
+img{
+    border: 5px solid #693316;
+    width: 80%;
+    padding: 8px;
+    margin: 16px;
+    border-top-right-radius: 24px;
+}
+
+ul{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
