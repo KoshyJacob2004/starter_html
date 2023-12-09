@@ -1,38 +1,113 @@
-body{
-    background-color: #3c4e75;
-}
-
+body {
+    background-color: rgb(240, 155, 155);
+    color:  rgb(0, 0, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
 h1{
+    font-size: 5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
     text-align: center;
-    font-size: 52px;
-    font-family: 'Abel', Courier, monospace;
-}
-
-h2,h3{
-    font-size: 30px;
-    font-family:'Ariel', Times, serif;
-    color:rgb(143, 42, 42);
-}
-
+    padding: 15px;
+  }
+h2{
+    font-size: 3em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    padding: 15px;
+    text-decoration: underline overline;
+  }
+h3{
+    font-size: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    padding: 15px;
+  }
 p{
-    line-height: 100%;
-}
-
-img{
-    border: 5px solid #693316;
-    width: 80%;
-    padding: 8px;
-    margin: 16px;
-    border-top-right-radius: 24px;
-}
+    font-size: 1em;
+    line-height: 2;
+    padding: 15px;
+  }
+hr{
+    border: 3px solid black;
+  }
 
 ul{
-    display: inline-block;
-    margin-left: 40px;
+  list-style-type: disc;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+nav ul {
+  display: flex;
+  list-style-type: none;
+  background-color: rgb(5, 252, 219);
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+  animation-name: navcolor;
+  animation-duration: 5s
+}
+@keyframes navcolor{
+  from {background-color: rgb(138, 253, 155) ;}
+  to {background-color: rgb(132, 124, 248);}
+}
+nav li {
+  float: left;
+  margin: auto;
+}
+
+nav li a{
+  display: block;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+nav li a:hover {
+  background-color: rgb(40, 33, 33);
+  text-decoration: underline;
+  color: white;
+}
+
+nav a:active{
+  text-decoration: underline overline;
+  border: 2px solid red;
+  color: purple;
+}
+#skip{
+  position: absolute;
+  top: auto;
+  left: -100px;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  color: rgb(0,0,0)
+}
+#skip:focus{
+  top: 0px;
+  position: static;
+  z-index: 2;
+}
+.pets_gallery{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 5px;
+  justify-content: flex-end;
+  justify-items: space-evenly;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  .gif{
+    display: none;
+  }
+  nav ul{
+    animation: none;
+  }
 }
